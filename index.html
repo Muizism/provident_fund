@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -21,18 +22,20 @@
             padding: 20px;
             width: 400px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding-right: 30px; /* Add padding to the right side */
         }
         h2 {
-            text-align: center;
             color: green;
         }
         label {
             display: block;
             margin-bottom: 5px;
             color: #333;
+            text-align: left;
         }
         input[type="text"], input[type="email"], input[type="date"], input[type="tel"] {
-            width: 100%;
+            width: calc(100% - 20px); /* Adjust width for padding */
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
@@ -50,17 +53,22 @@
         input[type="submit"]:hover {
             background-color: #45a049;
         }
+        footer {
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
         .logo {
-            position: absolute;
-            top: 10px;
-            right: 10px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <img src="logo.png" alt="Logo" class="logo" width="250">
+    <img src="logo.png" alt="Logo" class="logo" width="200">
     <h2>Provident Fund Status Information</h2>
     <form method="POST">
         <label for="fullname">Full Name</label>
@@ -81,6 +89,11 @@
         <input type="submit" value="Submit">
     </form>
 </div>
+
+<footer>
+    <br> <!-- Adds the line break gap above the footer text -->
+    © 2024 Oak Street Technologies. All rights reserved.
+</footer>
 
 </body>
 </html>
